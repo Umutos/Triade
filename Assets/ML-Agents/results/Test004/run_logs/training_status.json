@@ -1,0 +1,29 @@
+{
+    "RedAgent": {
+        "checkpoints": [
+            {
+                "steps": 82752,
+                "file_path": "results\\Test004\\RedAgent\\RedAgent-82752.onnx",
+                "reward": -5.6354824515680475,
+                "creation_time": 1770212087.8107686,
+                "auxillary_file_paths": [
+                    "results\\Test004\\RedAgent\\RedAgent-82752.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 82752,
+            "file_path": "results\\Test004\\RedAgent.onnx",
+            "reward": -5.6354824515680475,
+            "creation_time": 1770212087.8107686,
+            "auxillary_file_paths": [
+                "results\\Test004\\RedAgent\\RedAgent-82752.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}
