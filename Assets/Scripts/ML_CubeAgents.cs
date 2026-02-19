@@ -36,6 +36,10 @@ public class ML_CubeAgents: Agent
         rb = GetComponent<Rigidbody>();
         myRenderer = GetComponent<Renderer>();
         UpdateColor();
+
+        var raySensor = GetComponent<Unity.MLAgents.Sensors.RayPerceptionSensorComponent3D>();
+        int tagCount = raySensor != null ? raySensor.DetectableTags.Count : -1;
+        Debug.Log($"[CHECK] {gameObject.name} in {transform.parent?.name} - Team: {myTeam} - Tags: {tagCount} - SpaceSize: {GetComponent<Unity.MLAgents.Policies.BehaviorParameters>().BrainParameters.VectorObservationSize}");
     }
 
     public override void OnEpisodeBegin()
@@ -207,8 +211,7 @@ public class ML_CubeAgents: Agent
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-            AddReward(-0.5f);
-            EndEpisode();
+            AddReward(-0.1f);
             return;
         }
 
@@ -229,6 +232,14 @@ public class ML_CubeAgents: Agent
                 AddReward(-1.0f);
                 EndEpisode();
             }
+        }
+    }
+
+    void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            AddReward(-0.05f);
         }
     }
 

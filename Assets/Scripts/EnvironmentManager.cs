@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnvironmentManager : MonoBehaviour
 {
-    [Header("Paramètres de la Zone")]
+    [Header("Parameres de la Zone")]
     public float range = 10f; 
 
     [Header("Liste des Agents")]

@@ -572,7 +572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -580,10 +580,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -694,15 +698,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -710,7 +714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -722,10 +726,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -880,19 +888,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -908,6 +920,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -1239,15 +1255,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -1255,7 +1271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -1267,10 +1283,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -1982,19 +2002,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -2010,6 +2034,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -2448,24 +2476,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_SphereCastRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_DetectableTags.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -2481,6 +2517,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -2579,7 +2619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -2587,10 +2627,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -3025,15 +3069,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -3041,7 +3085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -3053,10 +3097,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -3203,7 +3251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -3211,10 +3259,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -3317,19 +3369,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -3345,6 +3401,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -3567,15 +3627,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -3583,7 +3643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -3595,10 +3655,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -3969,19 +4033,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -3997,6 +4065,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -4420,7 +4492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -4428,10 +4500,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -5765,15 +5841,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -5781,7 +5857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -5793,10 +5869,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -5899,19 +5979,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -5927,6 +6011,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -6249,19 +6337,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -6277,6 +6369,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -6394,19 +6490,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -6422,6 +6522,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -6528,19 +6632,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -6556,6 +6664,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -7221,24 +7333,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_SphereCastRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_DetectableTags.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -7254,6 +7374,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -7576,19 +7700,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -7604,6 +7732,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -7707,7 +7839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -7715,10 +7847,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -7932,15 +8068,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -7948,7 +8084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -7960,10 +8096,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -8526,7 +8666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -8534,10 +8674,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -8648,15 +8792,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -8664,7 +8808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -8676,10 +8820,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -8991,7 +9139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -8999,10 +9147,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -10221,15 +10373,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -10237,7 +10389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -10249,10 +10401,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -10738,19 +10894,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -10766,6 +10926,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -10867,19 +11031,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -10895,6 +11063,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -11009,15 +11181,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -11025,7 +11197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -11037,10 +11209,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -11744,15 +11920,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -11760,7 +11936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -11772,10 +11948,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -11878,19 +12058,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Yellow
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Red
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: 'm_DetectableTags.Array.data[3]'
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -11906,6 +12090,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -12584,7 +12772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -12592,10 +12780,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -12706,15 +12898,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -12722,7 +12914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -12734,10 +12926,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -12883,15 +13079,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -12899,7 +13095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -12911,10 +13107,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -13009,7 +13209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -13017,10 +13217,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -13110,7 +13314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -13118,10 +13322,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -13216,7 +13424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -13224,10 +13432,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -13521,15 +13733,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -13537,7 +13749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -13549,10 +13761,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -13972,7 +14188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -13980,10 +14196,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -14078,7 +14298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -14086,10 +14306,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -14411,7 +14635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSpaceType
@@ -14419,10 +14643,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
@@ -14533,15 +14761,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[0]'
-      value: Blue
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[1]'
-      value: Wall
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[2]'
-      value: Yellow
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8080101743093380132, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: 'm_DetectableTags.Array.data[3]'
@@ -14553,7 +14781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorName
-      value: CubeAgent
+      value: RedAgent
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BehaviorType
@@ -14565,10 +14793,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 13
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8646606720985073579, guid: 08e8ebc454347bc4f9f09d4261894163, type: 3}

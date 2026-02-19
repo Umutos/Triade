@@ -1,0 +1,65 @@
+{
+    "RedAgent": {
+        "checkpoints": [
+            {
+                "steps": 3499894,
+                "file_path": "results\\Test_Run002\\RedAgent\\RedAgent-3499894.onnx",
+                "reward": 1.3773447909525462,
+                "creation_time": 1771321447.9084318,
+                "auxillary_file_paths": [
+                    "results\\Test_Run002\\RedAgent\\RedAgent-3499894.pt"
+                ]
+            },
+            {
+                "steps": 3999978,
+                "file_path": "results\\Test_Run002\\RedAgent\\RedAgent-3999978.onnx",
+                "reward": 1.5149869130363742,
+                "creation_time": 1771321963.1690605,
+                "auxillary_file_paths": [
+                    "results\\Test_Run002\\RedAgent\\RedAgent-3999978.pt"
+                ]
+            },
+            {
+                "steps": 4499970,
+                "file_path": "results\\Test_Run002\\RedAgent\\RedAgent-4499970.onnx",
+                "reward": 1.1611647502235745,
+                "creation_time": 1771322501.5600698,
+                "auxillary_file_paths": [
+                    "results\\Test_Run002\\RedAgent\\RedAgent-4499970.pt"
+                ]
+            },
+            {
+                "steps": 4999964,
+                "file_path": "results\\Test_Run002\\RedAgent\\RedAgent-4999964.onnx",
+                "reward": 1.5643937182632877,
+                "creation_time": 1771323038.0391145,
+                "auxillary_file_paths": [
+                    "results\\Test_Run002\\RedAgent\\RedAgent-4999964.pt"
+                ]
+            },
+            {
+                "steps": 5000052,
+                "file_path": "results\\Test_Run002\\RedAgent\\RedAgent-5000052.onnx",
+                "reward": 1.5457048403291866,
+                "creation_time": 1771323038.2198853,
+                "auxillary_file_paths": [
+                    "results\\Test_Run002\\RedAgent\\RedAgent-5000052.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 5000052,
+            "file_path": "results\\Test_Run002\\RedAgent.onnx",
+            "reward": 1.5457048403291866,
+            "creation_time": 1771323038.2198853,
+            "auxillary_file_paths": [
+                "results\\Test_Run002\\RedAgent\\RedAgent-5000052.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}
