@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class EnvironmentManager : MonoBehaviour
 {
-    [Header("Parametres de la Zone")]
+    [Header("Paramètres de la Zone")]
     public float range = 10f;
+
+    [Header("Zones de Spawn")]
+    public Transform spawnZoneRed;
+    public Transform spawnZoneBlue;
+    public Transform spawnZoneYellow;
+    public float spawnRadius = 3f;
 
     [Header("Liste des Agents")]
     public List<ML_CubeAgents> agents;
@@ -68,6 +74,13 @@ public class EnvironmentManager : MonoBehaviour
 
     public void MoveToSafeRandomPosition(ML_CubeAgents agent)
     {
+        Transform spawnZone = null;
+        if (agent.myTeam == CubeTeam.Red) spawnZone = spawnZoneRed;
+        else if (agent.myTeam == CubeTeam.Blue) spawnZone = spawnZoneBlue;
+        else if (agent.myTeam == CubeTeam.Yellow) spawnZone = spawnZoneYellow;
+
+        if (spawnZone == null) spawnZone = transform;
+
         bool safePositionFound = false;
         int attempts = 100;
         Vector3 potentialPosition = Vector3.zero;
@@ -75,9 +88,9 @@ public class EnvironmentManager : MonoBehaviour
         while (!safePositionFound && attempts > 0)
         {
             attempts--;
-            float x = Random.Range(-range, range);
-            float z = Random.Range(-range, range);
-            potentialPosition = transform.position + new Vector3(x, 0.5f, z);
+            float x = Random.Range(-spawnRadius, spawnRadius);
+            float z = Random.Range(-spawnRadius, spawnRadius);
+            potentialPosition = spawnZone.position + new Vector3(x, 0.5f, z);
 
             Collider[] colliders = Physics.OverlapSphere(potentialPosition, spawnSafetyRadius);
             bool collisionFound = false;

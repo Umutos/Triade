@@ -1,0 +1,56 @@
+{
+    "RedAgent": {
+        "checkpoints": [
+            {
+                "steps": 499952,
+                "file_path": "results\\Test_3Teams_008\\RedAgent\\RedAgent-499952.onnx",
+                "reward": null,
+                "creation_time": 1771847418.79302,
+                "auxillary_file_paths": [
+                    "results\\Test_3Teams_008\\RedAgent\\RedAgent-499952.pt"
+                ]
+            },
+            {
+                "steps": 999896,
+                "file_path": "results\\Test_3Teams_008\\RedAgent\\RedAgent-999896.onnx",
+                "reward": null,
+                "creation_time": 1771847627.4535666,
+                "auxillary_file_paths": [
+                    "results\\Test_3Teams_008\\RedAgent\\RedAgent-999896.pt"
+                ]
+            },
+            {
+                "steps": 1499976,
+                "file_path": "results\\Test_3Teams_008\\RedAgent\\RedAgent-1499976.onnx",
+                "reward": null,
+                "creation_time": 1771847828.380358,
+                "auxillary_file_paths": [
+                    "results\\Test_3Teams_008\\RedAgent\\RedAgent-1499976.pt"
+                ]
+            },
+            {
+                "steps": 1583280,
+                "file_path": "results\\Test_3Teams_008\\RedAgent\\RedAgent-1583280.onnx",
+                "reward": null,
+                "creation_time": 1771847924.7105765,
+                "auxillary_file_paths": [
+                    "results\\Test_3Teams_008\\RedAgent\\RedAgent-1583280.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1583280,
+            "file_path": "results\\Test_3Teams_008\\RedAgent.onnx",
+            "reward": null,
+            "creation_time": 1771847924.7105765,
+            "auxillary_file_paths": [
+                "results\\Test_3Teams_008\\RedAgent\\RedAgent-1583280.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}

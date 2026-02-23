@@ -1,0 +1,29 @@
+{
+    "RedAgent": {
+        "checkpoints": [
+            {
+                "steps": 17280,
+                "file_path": "results\\Test_StepByStep_002\\RedAgent\\RedAgent-17280.onnx",
+                "reward": null,
+                "creation_time": 1771878179.1083539,
+                "auxillary_file_paths": [
+                    "results\\Test_StepByStep_002\\RedAgent\\RedAgent-17280.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 17280,
+            "file_path": "results\\Test_StepByStep_002\\RedAgent.onnx",
+            "reward": null,
+            "creation_time": 1771878179.1083539,
+            "auxillary_file_paths": [
+                "results\\Test_StepByStep_002\\RedAgent\\RedAgent-17280.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}

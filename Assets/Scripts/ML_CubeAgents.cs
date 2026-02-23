@@ -31,6 +31,8 @@ public class ML_CubeAgents: Agent
     private float previousDistanceTarget = 0f;
     private float previousDistancePredator = 0f;
 
+    private Vector3 lastSignificantPosition;
+
     public override void Initialize()
     {
         rb = GetComponent<Rigidbody>();
@@ -50,6 +52,7 @@ public class ML_CubeAgents: Agent
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         stepCount = 0;
+        lastSignificantPosition = transform.position;
 
         FindTarget();
         FindPredator();
@@ -121,7 +124,7 @@ public class ML_CubeAgents: Agent
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(transform.localPosition);     
-        sensor.AddObservation(rb.linearVelocity);           
+        sensor.AddObservation(rb.linearVelocity);
 
         if (currentTarget != null && currentTarget.gameObject.activeSelf)
         {
@@ -162,7 +165,6 @@ public class ML_CubeAgents: Agent
     public override void OnActionReceived(ActionBuffers actions)
     {
         if (!isAlive) return;
-
         stepCount++;
 
         if (stepCount >= maxSteps)
