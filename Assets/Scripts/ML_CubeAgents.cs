@@ -39,11 +39,13 @@ public class ML_CubeAgents: Agent
 
         var raySensor = GetComponent<Unity.MLAgents.Sensors.RayPerceptionSensorComponent3D>();
         int tagCount = raySensor != null ? raySensor.DetectableTags.Count : -1;
-        Debug.Log($"[CHECK] {gameObject.name} in {transform.parent?.name} - Team: {myTeam} - Tags: {tagCount} - SpaceSize: {GetComponent<Unity.MLAgents.Policies.BehaviorParameters>().BrainParameters.VectorObservationSize}");
     }
 
     public override void OnEpisodeBegin()
     {
+        isAlive = true;
+        gameObject.SetActive(true);
+
         envManager.MoveToSafeRandomPosition(this);
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
@@ -121,7 +123,7 @@ public class ML_CubeAgents: Agent
         sensor.AddObservation(transform.localPosition);     
         sensor.AddObservation(rb.linearVelocity);           
 
-        if (currentTarget != null)
+        if (currentTarget != null && currentTarget.gameObject.activeSelf)
         {
             Vector3 dirToTarget = (currentTarget.transform.localPosition - transform.localPosition).normalized;
             sensor.AddObservation(dirToTarget);            
@@ -130,11 +132,12 @@ public class ML_CubeAgents: Agent
         }
         else
         {
+            currentTarget = null;
             sensor.AddObservation(Vector3.zero);          
             sensor.AddObservation(0f);               
         }
 
-        if (currentPredator != null)
+        if (currentPredator != null && currentPredator.gameObject.activeSelf)
         {
             Vector3 dirToPredator = (currentPredator.transform.localPosition - transform.localPosition).normalized;
             sensor.AddObservation(dirToPredator);         
@@ -149,6 +152,7 @@ public class ML_CubeAgents: Agent
         }
         else
         {
+            currentPredator = null;
             sensor.AddObservation(Vector3.zero);         
             sensor.AddObservation(0f);                  
             sensor.AddObservation(Vector3.zero);        
@@ -157,6 +161,8 @@ public class ML_CubeAgents: Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
+        if (!isAlive) return;
+
         stepCount++;
 
         if (stepCount >= maxSteps)
@@ -173,7 +179,7 @@ public class ML_CubeAgents: Agent
 
         AddReward(-0.001f);
 
-        if (currentTarget != null)
+        if (currentTarget != null && currentTarget.gameObject.activeSelf)
         {
             float distTarget = Vector3.Distance(transform.position, currentTarget.transform.position);
             float deltaTarget = previousDistanceTarget - distTarget;
@@ -183,10 +189,11 @@ public class ML_CubeAgents: Agent
         }
         else
         {
+            currentTarget = null;
             FindTarget();
         }
 
-        if (currentPredator != null)
+        if (currentPredator != null && currentPredator.gameObject.activeSelf)
         {
             float distPredator = Vector3.Distance(transform.position, currentPredator.transform.position);
             float deltaPredator = distPredator - previousDistancePredator;
@@ -196,6 +203,7 @@ public class ML_CubeAgents: Agent
         }
         else
         {
+            currentPredator = null;
             FindPredator();
         }
     }
@@ -207,8 +215,17 @@ public class ML_CubeAgents: Agent
         continuousActions[1] = Input.GetAxis("Vertical");
     }
 
+    private bool isAlive = true;
+
+    public void Revive()
+    {
+        isAlive = true;
+    }
+
     void OnCollisionEnter(Collision collision)
     {
+        if (!isAlive) return;
+
         if (collision.gameObject.CompareTag("Wall"))
         {
             AddReward(-0.1f);
@@ -222,15 +239,13 @@ public class ML_CubeAgents: Agent
             if (IsPrey(otherAgent.myTeam))
             {
                 AddReward(5.0f);
-                EndEpisode();
 
+                otherAgent.isAlive = false;
                 otherAgent.AddReward(-1.0f);
-                otherAgent.EndEpisode();
+                envManager.OnAgentEliminated(otherAgent);
             }
             else if (IsPredator(otherAgent.myTeam))
             {
-                AddReward(-1.0f);
-                EndEpisode();
             }
         }
     }

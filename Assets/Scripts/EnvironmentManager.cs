@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnvironmentManager : MonoBehaviour
 {
-    [Header("Parameres de la Zone")]
-    public float range = 10f; 
+    [Header("Parametres de la Zone")]
+    public float range = 10f;
 
     [Header("Liste des Agents")]
     public List<ML_CubeAgents> agents;
@@ -13,14 +14,55 @@ public class EnvironmentManager : MonoBehaviour
 
     void Start()
     {
-        ResetAllAgents();
+        ResetRound();
     }
 
-    public void ResetAllAgents()
+    public void ResetRound()
     {
         foreach (var agent in agents)
         {
+            agent.gameObject.SetActive(true);
+            agent.Revive();
             MoveToSafeRandomPosition(agent);
+        }
+    }
+
+    public void OnAgentEliminated(ML_CubeAgents eliminated)
+    {
+        eliminated.gameObject.SetActive(false);
+
+        HashSet<CubeTeam> aliveTeams = new HashSet<CubeTeam>();
+        foreach (var agent in agents)
+        {
+            if (agent.gameObject.activeSelf)
+            {
+                aliveTeams.Add(agent.myTeam);
+            }
+        }
+
+        if (aliveTeams.Count <= 1)
+        {
+            if (aliveTeams.Count == 1)
+            {
+                CubeTeam winnerTeam = aliveTeams.First();
+                foreach (var agent in agents)
+                {
+                    if (agent.gameObject.activeSelf && agent.myTeam == winnerTeam)
+                    {
+                        agent.AddReward(3.0f);
+                    }
+                }
+            }
+
+            foreach (var agent in agents)
+            {
+                agent.gameObject.SetActive(true);
+            }
+
+            foreach (var agent in agents)
+            {
+                agent.EndEpisode();
+            }
         }
     }
 
@@ -33,14 +75,11 @@ public class EnvironmentManager : MonoBehaviour
         while (!safePositionFound && attempts > 0)
         {
             attempts--;
-
             float x = Random.Range(-range, range);
             float z = Random.Range(-range, range);
-
             potentialPosition = transform.position + new Vector3(x, 0.5f, z);
 
             Collider[] colliders = Physics.OverlapSphere(potentialPosition, spawnSafetyRadius);
-
             bool collisionFound = false;
             foreach (var col in colliders)
             {
@@ -50,28 +89,20 @@ public class EnvironmentManager : MonoBehaviour
                     break;
                 }
             }
-
             if (!collisionFound)
-            {
                 safePositionFound = true;
-            }
         }
 
         if (safePositionFound)
         {
             agent.transform.position = potentialPosition;
             agent.transform.rotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
-
             Rigidbody rb = agent.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 rb.linearVelocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
             }
-        }
-        else
-        {
-            Debug.LogWarning("Impossible de trouver une place libre pour " + agent.name);
         }
     }
 }
