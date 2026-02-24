@@ -1,0 +1,79 @@
+{
+    "area_size": {
+        "lesson_num": 0
+    },
+    "episode_duration": {
+        "lesson_num": 0
+    },
+    "PRV_Renard": {
+        "checkpoints": [
+            {
+                "steps": 499967,
+                "file_path": "results\\PRV_Run1\\PRV_Renard\\PRV_Renard-499967.onnx",
+                "reward": 0.09626700809819559,
+                "creation_time": 1771921821.7525017,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run1\\PRV_Renard\\PRV_Renard-499967.pt"
+                ]
+            },
+            {
+                "steps": 999963,
+                "file_path": "results\\PRV_Run1\\PRV_Renard\\PRV_Renard-999963.onnx",
+                "reward": -0.0044298111150662105,
+                "creation_time": 1771923243.4766123,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run1\\PRV_Renard\\PRV_Renard-999963.pt"
+                ]
+            }
+        ]
+    },
+    "PRV_Vipere": {
+        "checkpoints": [
+            {
+                "steps": 499967,
+                "file_path": "results\\PRV_Run1\\PRV_Vipere\\PRV_Vipere-499967.onnx",
+                "reward": -0.4346651885251718,
+                "creation_time": 1771921821.552094,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run1\\PRV_Vipere\\PRV_Vipere-499967.pt"
+                ]
+            },
+            {
+                "steps": 999963,
+                "file_path": "results\\PRV_Run1\\PRV_Vipere\\PRV_Vipere-999963.onnx",
+                "reward": -1.1996007591485978,
+                "creation_time": 1771923243.2692003,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run1\\PRV_Vipere\\PRV_Vipere-999963.pt"
+                ]
+            }
+        ]
+    },
+    "PRV_Poule": {
+        "checkpoints": [
+            {
+                "steps": 499967,
+                "file_path": "results\\PRV_Run1\\PRV_Poule\\PRV_Poule-499967.onnx",
+                "reward": -0.23003172676009392,
+                "creation_time": 1771921821.6556764,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run1\\PRV_Poule\\PRV_Poule-499967.pt"
+                ]
+            },
+            {
+                "steps": 999963,
+                "file_path": "results\\PRV_Run1\\PRV_Poule\\PRV_Poule-999963.onnx",
+                "reward": 0.7290193097045025,
+                "creation_time": 1771923243.379292,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run1\\PRV_Poule\\PRV_Poule-999963.pt"
+                ]
+            }
+        ]
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}

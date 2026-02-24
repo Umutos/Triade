@@ -1,0 +1,47 @@
+{
+    "RedAgent": {
+        "checkpoints": [
+            {
+                "steps": 499920,
+                "file_path": "results\\Test_RedEatBlue_001\\RedAgent\\RedAgent-499920.onnx",
+                "reward": null,
+                "creation_time": 1771918953.227617,
+                "auxillary_file_paths": [
+                    "results\\Test_RedEatBlue_001\\RedAgent\\RedAgent-499920.pt"
+                ]
+            },
+            {
+                "steps": 999984,
+                "file_path": "results\\Test_RedEatBlue_001\\RedAgent\\RedAgent-999984.onnx",
+                "reward": null,
+                "creation_time": 1771919178.6768064,
+                "auxillary_file_paths": [
+                    "results\\Test_RedEatBlue_001\\RedAgent\\RedAgent-999984.pt"
+                ]
+            },
+            {
+                "steps": 1059120,
+                "file_path": "results\\Test_RedEatBlue_001\\RedAgent\\RedAgent-1059120.onnx",
+                "reward": null,
+                "creation_time": 1771919351.9165463,
+                "auxillary_file_paths": [
+                    "results\\Test_RedEatBlue_001\\RedAgent\\RedAgent-1059120.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1059120,
+            "file_path": "results\\Test_RedEatBlue_001\\RedAgent.onnx",
+            "reward": null,
+            "creation_time": 1771919351.9165463,
+            "auxillary_file_paths": [
+                "results\\Test_RedEatBlue_001\\RedAgent\\RedAgent-1059120.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "RedAgent": {
+        "checkpoints": [
+            {
+                "steps": 1999936,
+                "file_path": "results\\Test_Triade001\\RedAgent\\RedAgent-1999936.onnx",
+                "reward": null,
+                "creation_time": 1771917153.607299,
+                "auxillary_file_paths": [
+                    "results\\Test_Triade001\\RedAgent\\RedAgent-1999936.pt"
+                ]
+            },
+            {
+                "steps": 2499944,
+                "file_path": "results\\Test_Triade001\\RedAgent\\RedAgent-2499944.onnx",
+                "reward": -2.498427875070687,
+                "creation_time": 1771917342.3616927,
+                "auxillary_file_paths": [
+                    "results\\Test_Triade001\\RedAgent\\RedAgent-2499944.pt"
+                ]
+            },
+            {
+                "steps": 2999944,
+                "file_path": "results\\Test_Triade001\\RedAgent\\RedAgent-2999944.onnx",
+                "reward": -4.164406098425388,
+                "creation_time": 1771917594.4776878,
+                "auxillary_file_paths": [
+                    "results\\Test_Triade001\\RedAgent\\RedAgent-2999944.pt"
+                ]
+            },
+            {
+                "steps": 3499904,
+                "file_path": "results\\Test_Triade001\\RedAgent\\RedAgent-3499904.onnx",
+                "reward": null,
+                "creation_time": 1771917803.5307436,
+                "auxillary_file_paths": [
+                    "results\\Test_Triade001\\RedAgent\\RedAgent-3499904.pt"
+                ]
+            },
+            {
+                "steps": 3584568,
+                "file_path": "results\\Test_Triade001\\RedAgent\\RedAgent-3584568.onnx",
+                "reward": null,
+                "creation_time": 1771917843.0437205,
+                "auxillary_file_paths": [
+                    "results\\Test_Triade001\\RedAgent\\RedAgent-3584568.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3584568,
+            "file_path": "results\\Test_Triade001\\RedAgent.onnx",
+            "reward": null,
+            "creation_time": 1771917843.0437205,
+            "auxillary_file_paths": [
+                "results\\Test_Triade001\\RedAgent\\RedAgent-3584568.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}

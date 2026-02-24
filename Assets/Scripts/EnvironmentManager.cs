@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class EnvironmentManager : MonoBehaviour
 {
-    [Header("Paramètres de la Zone")]
-    public float range = 10f;
-
     [Header("Zones de Spawn")]
     public Transform spawnZoneRed;
     public Transform spawnZoneBlue;
@@ -27,7 +24,6 @@ public class EnvironmentManager : MonoBehaviour
     {
         foreach (var agent in agents)
         {
-            agent.gameObject.SetActive(true);
             agent.Revive();
             MoveToSafeRandomPosition(agent);
         }
@@ -35,12 +31,12 @@ public class EnvironmentManager : MonoBehaviour
 
     public void OnAgentEliminated(ML_CubeAgents eliminated)
     {
-        eliminated.gameObject.SetActive(false);
+        eliminated.Disable();
 
         HashSet<CubeTeam> aliveTeams = new HashSet<CubeTeam>();
         foreach (var agent in agents)
         {
-            if (agent.gameObject.activeSelf)
+            if (agent.isAlive)
             {
                 aliveTeams.Add(agent.myTeam);
             }
@@ -53,7 +49,7 @@ public class EnvironmentManager : MonoBehaviour
                 CubeTeam winnerTeam = aliveTeams.First();
                 foreach (var agent in agents)
                 {
-                    if (agent.gameObject.activeSelf && agent.myTeam == winnerTeam)
+                    if (agent.isAlive && agent.myTeam == winnerTeam)
                     {
                         agent.AddReward(3.0f);
                     }
@@ -62,7 +58,7 @@ public class EnvironmentManager : MonoBehaviour
 
             foreach (var agent in agents)
             {
-                agent.gameObject.SetActive(true);
+                agent.Revive();
             }
 
             foreach (var agent in agents)
@@ -102,6 +98,7 @@ public class EnvironmentManager : MonoBehaviour
                     break;
                 }
             }
+
             if (!collisionFound)
                 safePositionFound = true;
         }
@@ -110,6 +107,7 @@ public class EnvironmentManager : MonoBehaviour
         {
             agent.transform.position = potentialPosition;
             agent.transform.rotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+
             Rigidbody rb = agent.GetComponent<Rigidbody>();
             if (rb != null)
             {

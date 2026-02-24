@@ -10,11 +10,10 @@ public enum CubeTeam
     Yellow
 }
 
-public class ML_CubeAgents: Agent
+public class ML_CubeAgents : Agent
 {
     public CubeTeam myTeam;
     public float moveSpeed = 10f;
-    public int maxSteps = 1000;
 
     public Material matRed;
     public Material matBlue;
@@ -22,37 +21,32 @@ public class ML_CubeAgents: Agent
 
     private Rigidbody rb;
     private Renderer myRenderer;
+    private Collider myCollider;
     [SerializeField] private EnvironmentManager envManager;
-    private float previousDistance = float.MaxValue;
-    
+
     private int stepCount = 0;
     private GameObject currentTarget;
     private GameObject currentPredator;
     private float previousDistanceTarget = 0f;
     private float previousDistancePredator = 0f;
 
-    private Vector3 lastSignificantPosition;
+    [HideInInspector] public bool isAlive = true;
 
     public override void Initialize()
     {
         rb = GetComponent<Rigidbody>();
         myRenderer = GetComponent<Renderer>();
+        myCollider = GetComponent<Collider>();
         UpdateColor();
-
-        var raySensor = GetComponent<Unity.MLAgents.Sensors.RayPerceptionSensorComponent3D>();
-        int tagCount = raySensor != null ? raySensor.DetectableTags.Count : -1;
     }
 
     public override void OnEpisodeBegin()
     {
-        isAlive = true;
-        gameObject.SetActive(true);
-
+        Revive();
         envManager.MoveToSafeRandomPosition(this);
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         stepCount = 0;
-        lastSignificantPosition = transform.position;
 
         FindTarget();
         FindPredator();
@@ -68,50 +62,68 @@ public class ML_CubeAgents: Agent
             previousDistancePredator = 0f;
     }
 
+    public void Revive()
+    {
+        isAlive = true;
+        myRenderer.enabled = true;
+        myCollider.enabled = true;
+        rb.isKinematic = false;
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+    }
+
+
+    public void Disable()
+    {
+        isAlive = false;
+        myRenderer.enabled = false;
+        myCollider.enabled = false;
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        rb.isKinematic = true;
+    }
     void FindTarget()
     {
-        string targetTag = "";
-        if (myTeam == CubeTeam.Red) targetTag = "Blue";
-        else if (myTeam == CubeTeam.Blue) targetTag = "Yellow";
-        else if (myTeam == CubeTeam.Yellow) targetTag = "Red";
-
-        GameObject[] targets = GameObject.FindGameObjectsWithTag(targetTag);
-        if (targets.Length > 0)
-        {
-            float minDist = Mathf.Infinity;
-            foreach (GameObject t in targets)
-            {
-                float dist = Vector3.Distance(transform.position, t.transform.position);
-                if (dist < minDist)
-                {
-                    minDist = dist;
-                    currentTarget = t;
-                }
-            }
-        }
+        currentTarget = FindClosestAgentOfRole(GetPreyTeam());
     }
 
     void FindPredator()
     {
-        string predatorTag = "";
-        if (myTeam == CubeTeam.Red) predatorTag = "Yellow";
-        else if (myTeam == CubeTeam.Blue) predatorTag = "Red";
-        else if (myTeam == CubeTeam.Yellow) predatorTag = "Blue";
+        currentPredator = FindClosestAgentOfRole(GetPredatorTeam());
+    }
 
-        GameObject[] predators = GameObject.FindGameObjectsWithTag(predatorTag);
-        if (predators.Length > 0)
+    GameObject FindClosestAgentOfRole(CubeTeam targetTeam)
+    {
+        GameObject closest = null;
+        float minDist = Mathf.Infinity;
+
+        foreach (var agent in envManager.agents)
         {
-            float minDist = Mathf.Infinity;
-            foreach (GameObject p in predators)
+            if (!agent.isAlive) continue;
+            if (agent.myTeam != targetTeam) continue;
+
+            float dist = Vector3.Distance(transform.position, agent.transform.position);
+            if (dist < minDist)
             {
-                float dist = Vector3.Distance(transform.position, p.transform.position);
-                if (dist < minDist)
-                {
-                    minDist = dist;
-                    currentPredator = p;
-                }
+                minDist = dist;
+                closest = agent.gameObject;
             }
         }
+        return closest;
+    }
+
+    CubeTeam GetPreyTeam()
+    {
+        if (myTeam == CubeTeam.Red) return CubeTeam.Blue;
+        if (myTeam == CubeTeam.Blue) return CubeTeam.Yellow;
+        return CubeTeam.Red;
+    }
+
+    CubeTeam GetPredatorTeam()
+    {
+        if (myTeam == CubeTeam.Red) return CubeTeam.Yellow;
+        if (myTeam == CubeTeam.Blue) return CubeTeam.Red;
+        return CubeTeam.Blue;
     }
 
     void UpdateColor()
@@ -121,58 +133,61 @@ public class ML_CubeAgents: Agent
         else if (myTeam == CubeTeam.Yellow) myRenderer.material = matYellow;
     }
 
+    bool IsValidTarget(GameObject obj)
+    {
+        if (obj == null) return false;
+        var agent = obj.GetComponent<ML_CubeAgents>();
+        return agent != null && agent.isAlive;
+    }
+
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(transform.localPosition);     
+        sensor.AddObservation(transform.localPosition);
         sensor.AddObservation(rb.linearVelocity);
 
-        if (currentTarget != null && currentTarget.gameObject.activeSelf)
+        if (IsValidTarget(currentTarget))
         {
             Vector3 dirToTarget = (currentTarget.transform.localPosition - transform.localPosition).normalized;
-            sensor.AddObservation(dirToTarget);            
+            sensor.AddObservation(dirToTarget);
             float distTarget = Vector3.Distance(transform.localPosition, currentTarget.transform.localPosition);
-            sensor.AddObservation(distTarget / 20f);        
+            sensor.AddObservation(distTarget / 20f);
         }
         else
         {
             currentTarget = null;
-            sensor.AddObservation(Vector3.zero);          
-            sensor.AddObservation(0f);               
+            FindTarget();
+            sensor.AddObservation(Vector3.zero);
+            sensor.AddObservation(0f);
         }
 
-        if (currentPredator != null && currentPredator.gameObject.activeSelf)
+        if (IsValidTarget(currentPredator))
         {
             Vector3 dirToPredator = (currentPredator.transform.localPosition - transform.localPosition).normalized;
-            sensor.AddObservation(dirToPredator);         
+            sensor.AddObservation(dirToPredator);
             float distPredator = Vector3.Distance(transform.localPosition, currentPredator.transform.localPosition);
-            sensor.AddObservation(distPredator / 20f);    
+            sensor.AddObservation(distPredator / 20f);
 
             Rigidbody predRb = currentPredator.GetComponent<Rigidbody>();
             if (predRb != null)
-                sensor.AddObservation(predRb.linearVelocity); 
+                sensor.AddObservation(predRb.linearVelocity);
             else
-                sensor.AddObservation(Vector3.zero);    
+                sensor.AddObservation(Vector3.zero);
         }
         else
         {
             currentPredator = null;
-            sensor.AddObservation(Vector3.zero);         
-            sensor.AddObservation(0f);                  
-            sensor.AddObservation(Vector3.zero);        
+            FindPredator();
+            sensor.AddObservation(Vector3.zero);
+            sensor.AddObservation(0f);
+            sensor.AddObservation(Vector3.zero);
         }
     }
+
 
     public override void OnActionReceived(ActionBuffers actions)
     {
         if (!isAlive) return;
         stepCount++;
-
-        if (stepCount >= maxSteps)
-        {
-            AddReward(-1.0f);
-            EndEpisode();
-            return;
-        }
 
         float moveX = actions.ContinuousActions[0];
         float moveZ = actions.ContinuousActions[1];
@@ -181,7 +196,7 @@ public class ML_CubeAgents: Agent
 
         AddReward(-0.001f);
 
-        if (currentTarget != null && currentTarget.gameObject.activeSelf)
+        if (IsValidTarget(currentTarget))
         {
             float distTarget = Vector3.Distance(transform.position, currentTarget.transform.position);
             float deltaTarget = previousDistanceTarget - distTarget;
@@ -193,9 +208,11 @@ public class ML_CubeAgents: Agent
         {
             currentTarget = null;
             FindTarget();
+            if (currentTarget != null)
+                previousDistanceTarget = Vector3.Distance(transform.position, currentTarget.transform.position);
         }
 
-        if (currentPredator != null && currentPredator.gameObject.activeSelf)
+        if (IsValidTarget(currentPredator))
         {
             float distPredator = Vector3.Distance(transform.position, currentPredator.transform.position);
             float deltaPredator = distPredator - previousDistancePredator;
@@ -207,6 +224,8 @@ public class ML_CubeAgents: Agent
         {
             currentPredator = null;
             FindPredator();
+            if (currentPredator != null)
+                previousDistancePredator = Vector3.Distance(transform.position, currentPredator.transform.position);
         }
     }
 
@@ -215,13 +234,6 @@ public class ML_CubeAgents: Agent
         var continuousActions = actionsOut.ContinuousActions;
         continuousActions[0] = Input.GetAxis("Horizontal");
         continuousActions[1] = Input.GetAxis("Vertical");
-    }
-
-    private bool isAlive = true;
-
-    public void Revive()
-    {
-        isAlive = true;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -236,18 +248,13 @@ public class ML_CubeAgents: Agent
 
         ML_CubeAgents otherAgent = collision.gameObject.GetComponent<ML_CubeAgents>();
 
-        if (otherAgent != null)
+        if (otherAgent != null && otherAgent.isAlive)
         {
             if (IsPrey(otherAgent.myTeam))
             {
                 AddReward(5.0f);
-
-                otherAgent.isAlive = false;
                 otherAgent.AddReward(-1.0f);
                 envManager.OnAgentEliminated(otherAgent);
-            }
-            else if (IsPredator(otherAgent.myTeam))
-            {
             }
         }
     }

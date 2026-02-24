@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -191,6 +195,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (14)
@@ -199,6 +211,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -206,6 +222,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -227,6 +251,10 @@ PrefabInstance:
     - target: {fileID: 546197024566771419, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -284,6 +312,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (7)
@@ -292,6 +328,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -299,6 +339,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -458,6 +506,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -514,6 +566,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (4)
@@ -522,6 +582,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -529,6 +593,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -672,6 +744,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -728,6 +804,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (10)
@@ -736,6 +820,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -743,6 +831,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -764,6 +860,10 @@ PrefabInstance:
     - target: {fileID: 546197024566771419, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -821,6 +921,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (12)
@@ -829,6 +937,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -836,6 +948,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -857,6 +977,10 @@ PrefabInstance:
     - target: {fileID: 546197024566771419, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -914,6 +1038,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (9)
@@ -922,6 +1054,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -929,6 +1065,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -984,6 +1128,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &921316761 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1539348073970044165, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+  m_PrefabInstance: {fileID: 815810247}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &988982841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -999,6 +1148,10 @@ PrefabInstance:
     - target: {fileID: 546197024566771419, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -1056,6 +1209,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (13)
@@ -1064,6 +1225,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -1071,6 +1236,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1093,6 +1266,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -1149,6 +1326,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (8)
@@ -1157,6 +1342,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -1164,6 +1353,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1186,6 +1383,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -1242,6 +1443,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (2)
@@ -1250,6 +1459,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -1257,6 +1470,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1279,6 +1500,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -1335,6 +1560,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (5)
@@ -1343,6 +1576,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -1350,6 +1587,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1371,6 +1616,10 @@ PrefabInstance:
     - target: {fileID: 546197024566771419, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -1428,6 +1677,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (6)
@@ -1436,6 +1693,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -1443,6 +1704,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1464,6 +1733,10 @@ PrefabInstance:
     - target: {fileID: 546197024566771419, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -1521,6 +1794,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (3)
@@ -1529,6 +1810,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -1536,6 +1821,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1557,6 +1850,10 @@ PrefabInstance:
     - target: {fileID: 546197024566771419, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -1614,6 +1911,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (11)
@@ -1622,6 +1927,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -1629,6 +1938,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1650,6 +1967,10 @@ PrefabInstance:
     - target: {fileID: 546197024566771419, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -1707,6 +2028,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround (1)
@@ -1715,6 +2044,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -1722,6 +2055,14 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1743,6 +2084,10 @@ PrefabInstance:
     - target: {fileID: 546197024566771419, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 903628423191974371, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1681899640563444161, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
@@ -1800,6 +2145,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4988562406665227239, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451575892215945725, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5802583395480400714, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_Name
       value: PlayGround
@@ -1808,6 +2161,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 6394772061327758453, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: moveSpeed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6535889823135731700, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
@@ -1815,6 +2172,18 @@ PrefabInstance:
     - target: {fileID: 7623133333440396676, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821747925045334321, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: spawnZoneYellow
+      value: 
+      objectReference: {fileID: 921316761}
+    - target: {fileID: 8693058568793797823, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724977077551441953, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
