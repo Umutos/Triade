@@ -16,47 +16,70 @@ public class PRVAgent : Agent
 
     [Header("=== Références (assignées par le GameManager) ===")]
     [HideInInspector] public PRVGameManager gameManager;
-    [HideInInspector] public Transform preyTransform; 
+    [HideInInspector] public Transform preyTransform;
     [HideInInspector] public Transform predatorTransform;
 
     private Rigidbody rb;
-    private Vector3 startPosition;
-    private float existentialTimer;
+
+    private Vector3 pendingSpawnPosition;
+    private Quaternion pendingSpawnRotation;
+    private bool hasPendingSpawn = false;
+
+    private Vector3 RelativePosition(Vector3 worldPos)
+    {
+        Vector3 arenaCenter = gameManager != null ? gameManager.transform.position : Vector3.zero;
+        return worldPos - arenaCenter;
+    }
 
     public override void Initialize()
     {
         rb = GetComponent<Rigidbody>();
-        startPosition = transform.localPosition;
+    }
+
+    public void SetPendingSpawn(Vector3 worldPosition, Quaternion rotation)
+    {
+        pendingSpawnPosition = worldPosition;
+        pendingSpawnRotation = rotation;
+        hasPendingSpawn = true;
     }
 
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = startPosition + new Vector3(
-            Random.Range(-2f, 2f), 0f, Random.Range(-2f, 2f)
-        );
-        transform.localRotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
-
         if (rb != null)
         {
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
 
-        existentialTimer = 0f;
+        if (hasPendingSpawn)
+        {
+            transform.position = pendingSpawnPosition;
+            transform.rotation = pendingSpawnRotation;
+
+            if (rb != null)
+            {
+                rb.position = pendingSpawnPosition;
+                rb.rotation = pendingSpawnRotation;
+            }
+
+            hasPendingSpawn = false;
+        }
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {
         float areaSize = gameManager != null ? gameManager.areaSize : 10f;
-        sensor.AddObservation(transform.localPosition.x / areaSize);
-        sensor.AddObservation(transform.localPosition.z / areaSize);
+
+        Vector3 myRelPos = RelativePosition(transform.position);
+        sensor.AddObservation(myRelPos.x / areaSize);
+        sensor.AddObservation(myRelPos.z / areaSize);
 
         sensor.AddObservation(transform.forward.x);
         sensor.AddObservation(transform.forward.z);
 
         if (preyTransform != null && preyTransform.gameObject.activeSelf)
         {
-            Vector3 toPrey = preyTransform.localPosition - transform.localPosition;
+            Vector3 toPrey = preyTransform.position - transform.position;
             sensor.AddObservation(toPrey.x / areaSize);
             sensor.AddObservation(toPrey.z / areaSize);
             sensor.AddObservation(toPrey.magnitude / areaSize);
@@ -70,7 +93,7 @@ public class PRVAgent : Agent
 
         if (predatorTransform != null && predatorTransform.gameObject.activeSelf)
         {
-            Vector3 toPredator = predatorTransform.localPosition - transform.localPosition;
+            Vector3 toPredator = predatorTransform.position - transform.position;
             sensor.AddObservation(toPredator.x / areaSize);
             sensor.AddObservation(toPredator.z / areaSize);
             sensor.AddObservation(toPredator.magnitude / areaSize);
@@ -87,8 +110,8 @@ public class PRVAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        float moveInput = actions.ContinuousActions[0]; 
-        float turnInput = actions.ContinuousActions[1]; 
+        float moveInput = actions.ContinuousActions[0];
+        float turnInput = actions.ContinuousActions[1];
 
         Vector3 move = transform.forward * moveInput * moveSpeed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position + move);
@@ -96,34 +119,39 @@ public class PRVAgent : Agent
         float rotation = turnInput * rotationSpeed * Time.fixedDeltaTime;
         transform.Rotate(0f, rotation, 0f);
 
-        existentialTimer += Time.fixedDeltaTime;
         AddReward(-0.0005f);
+
+        float areaSize = gameManager != null ? gameManager.areaSize : 10f;
 
         if (preyTransform != null && preyTransform.gameObject.activeSelf)
         {
-            float distToPrey = Vector3.Distance(transform.localPosition, preyTransform.localPosition);
-            float areaSize = gameManager != null ? gameManager.areaSize : 10f;
-            AddReward((1f - distToPrey / areaSize) * 0.001f);
+            float distToPrey = Vector3.Distance(transform.position, preyTransform.position);
+            AddReward((1f - distToPrey / areaSize) * 0.005f);
         }
 
         if (predatorTransform != null && predatorTransform.gameObject.activeSelf)
         {
-            float distToPredator = Vector3.Distance(transform.localPosition, predatorTransform.localPosition);
+            float distToPredator = Vector3.Distance(transform.position, predatorTransform.position);
             if (distToPredator < 3f)
             {
                 AddReward(-0.002f);
             }
         }
 
-        float aSize = gameManager != null ? gameManager.areaSize : 10f;
-        if (Mathf.Abs(transform.localPosition.x) > aSize ||
-            Mathf.Abs(transform.localPosition.z) > aSize)
+        Vector3 relPos = RelativePosition(transform.position);
+        if (Mathf.Abs(relPos.x) > areaSize || Mathf.Abs(relPos.z) > areaSize)
         {
             AddReward(-0.01f);
-            Vector3 pos = transform.localPosition;
-            pos.x = Mathf.Clamp(pos.x, -aSize, aSize);
-            pos.z = Mathf.Clamp(pos.z, -aSize, aSize);
-            transform.localPosition = pos;
+
+            relPos.x = Mathf.Clamp(relPos.x, -areaSize, areaSize);
+            relPos.z = Mathf.Clamp(relPos.z, -areaSize, areaSize);
+
+            Vector3 arenaCenter = gameManager != null ? gameManager.transform.position : Vector3.zero;
+            transform.position = new Vector3(
+                arenaCenter.x + relPos.x,
+                transform.position.y,
+                arenaCenter.z + relPos.z
+            );
         }
     }
 
@@ -167,10 +195,18 @@ public class PRVAgent : Agent
         };
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            AddReward(-0.0005f);
+        }
+    }
+
     private void OnAteTarget(PRVAgent prey)
     {
-        AddReward(1.0f);  
-        prey.AddReward(-1.0f); 
+        AddReward(1.0f);
+        prey.AddReward(-1.0f);
 
         if (gameManager != null)
         {

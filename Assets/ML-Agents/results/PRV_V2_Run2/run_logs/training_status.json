@@ -1,0 +1,53 @@
+{
+    "area_size": {
+        "lesson_num": 0
+    },
+    "episode_duration": {
+        "lesson_num": 0
+    },
+    "PRV_Agent": {
+        "checkpoints": [
+            {
+                "steps": 499875,
+                "file_path": "results\\PRV_V2_Run2\\PRV_Agent\\PRV_Agent-499875.onnx",
+                "reward": -0.7103829433520635,
+                "creation_time": 1772048586.0237956,
+                "auxillary_file_paths": [
+                    "results\\PRV_V2_Run2\\PRV_Agent\\PRV_Agent-499875.pt"
+                ]
+            },
+            {
+                "steps": 999988,
+                "file_path": "results\\PRV_V2_Run2\\PRV_Agent\\PRV_Agent-999988.onnx",
+                "reward": -0.22380202412605285,
+                "creation_time": 1772048905.2891612,
+                "auxillary_file_paths": [
+                    "results\\PRV_V2_Run2\\PRV_Agent\\PRV_Agent-999988.pt"
+                ]
+            },
+            {
+                "steps": 1499583,
+                "file_path": "results\\PRV_V2_Run2\\PRV_Agent\\PRV_Agent-1499583.onnx",
+                "reward": null,
+                "creation_time": 1772049306.2793589,
+                "auxillary_file_paths": [
+                    "results\\PRV_V2_Run2\\PRV_Agent\\PRV_Agent-1499583.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1499583,
+            "file_path": "results\\PRV_V2_Run2\\PRV_Agent.onnx",
+            "reward": null,
+            "creation_time": 1772049306.2793589,
+            "auxillary_file_paths": [
+                "results\\PRV_V2_Run2\\PRV_Agent\\PRV_Agent-1499583.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}

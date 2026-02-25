@@ -1,0 +1,160 @@
+{
+    "area_size": {
+        "lesson_num": 0
+    },
+    "episode_duration": {
+        "lesson_num": 0
+    },
+    "PRV_Vipere": {
+        "checkpoints": [
+            {
+                "steps": 278,
+                "file_path": "results\\PRV_Run2\\PRV_Vipere\\PRV_Vipere-278.onnx",
+                "reward": -1.3501730958620708,
+                "creation_time": 1772020115.5967224,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run2\\PRV_Vipere\\PRV_Vipere-278.pt"
+                ]
+            },
+            {
+                "steps": 499941,
+                "file_path": "results\\PRV_Run2\\PRV_Vipere\\PRV_Vipere-499941.onnx",
+                "reward": -2.432288192698489,
+                "creation_time": 1772021359.096031,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run2\\PRV_Vipere\\PRV_Vipere-499941.pt"
+                ]
+            },
+            {
+                "steps": 999762,
+                "file_path": "results\\PRV_Run2\\PRV_Vipere\\PRV_Vipere-999762.onnx",
+                "reward": -3.342872467978547,
+                "creation_time": 1772022534.6063893,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run2\\PRV_Vipere\\PRV_Vipere-999762.pt"
+                ]
+            },
+            {
+                "steps": 1336079,
+                "file_path": "results\\PRV_Run2\\PRV_Vipere\\PRV_Vipere-1336079.onnx",
+                "reward": -2.3782757935114205,
+                "creation_time": 1772023407.763466,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run2\\PRV_Vipere\\PRV_Vipere-1336079.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1336079,
+            "file_path": "results\\PRV_Run2\\PRV_Vipere.onnx",
+            "reward": -2.3782757935114205,
+            "creation_time": 1772023407.763466,
+            "auxillary_file_paths": [
+                "results\\PRV_Run2\\PRV_Vipere\\PRV_Vipere-1336079.pt"
+            ]
+        }
+    },
+    "PRV_Poule": {
+        "checkpoints": [
+            {
+                "steps": 278,
+                "file_path": "results\\PRV_Run2\\PRV_Poule\\PRV_Poule-278.onnx",
+                "reward": -0.27495922644933063,
+                "creation_time": 1772020115.7103305,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run2\\PRV_Poule\\PRV_Poule-278.pt"
+                ]
+            },
+            {
+                "steps": 499941,
+                "file_path": "results\\PRV_Run2\\PRV_Poule\\PRV_Poule-499941.onnx",
+                "reward": -2.6734524840570013,
+                "creation_time": 1772021358.9604404,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run2\\PRV_Poule\\PRV_Poule-499941.pt"
+                ]
+            },
+            {
+                "steps": 999762,
+                "file_path": "results\\PRV_Run2\\PRV_Poule\\PRV_Poule-999762.onnx",
+                "reward": -2.5774147376634775,
+                "creation_time": 1772022534.4974847,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run2\\PRV_Poule\\PRV_Poule-999762.pt"
+                ]
+            },
+            {
+                "steps": 1336079,
+                "file_path": "results\\PRV_Run2\\PRV_Poule\\PRV_Poule-1336079.onnx",
+                "reward": -2.4363011599659026,
+                "creation_time": 1772023407.6613562,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run2\\PRV_Poule\\PRV_Poule-1336079.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1336079,
+            "file_path": "results\\PRV_Run2\\PRV_Poule.onnx",
+            "reward": -2.4363011599659026,
+            "creation_time": 1772023407.6613562,
+            "auxillary_file_paths": [
+                "results\\PRV_Run2\\PRV_Poule\\PRV_Poule-1336079.pt"
+            ]
+        }
+    },
+    "PRV_Renard": {
+        "checkpoints": [
+            {
+                "steps": 278,
+                "file_path": "results\\PRV_Run2\\PRV_Renard\\PRV_Renard-278.onnx",
+                "reward": 0.03520205616950989,
+                "creation_time": 1772020115.8145447,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run2\\PRV_Renard\\PRV_Renard-278.pt"
+                ]
+            },
+            {
+                "steps": 499941,
+                "file_path": "results\\PRV_Run2\\PRV_Renard\\PRV_Renard-499941.onnx",
+                "reward": -3.7371704579209504,
+                "creation_time": 1772021359.232423,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run2\\PRV_Renard\\PRV_Renard-499941.pt"
+                ]
+            },
+            {
+                "steps": 999762,
+                "file_path": "results\\PRV_Run2\\PRV_Renard\\PRV_Renard-999762.onnx",
+                "reward": -1.9311250083523595,
+                "creation_time": 1772022534.7089133,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run2\\PRV_Renard\\PRV_Renard-999762.pt"
+                ]
+            },
+            {
+                "steps": 1336079,
+                "file_path": "results\\PRV_Run2\\PRV_Renard\\PRV_Renard-1336079.onnx",
+                "reward": -1.8816511509163927,
+                "creation_time": 1772023407.8360646,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run2\\PRV_Renard\\PRV_Renard-1336079.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1336079,
+            "file_path": "results\\PRV_Run2\\PRV_Renard.onnx",
+            "reward": -1.8816511509163927,
+            "creation_time": 1772023407.8360646,
+            "auxillary_file_paths": [
+                "results\\PRV_Run2\\PRV_Renard\\PRV_Renard-1336079.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}

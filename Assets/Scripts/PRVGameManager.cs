@@ -1,5 +1,6 @@
 using UnityEngine;
 using Unity.MLAgents;
+using System.Collections.Generic;
 
 public class PRVGameManager : MonoBehaviour
 {
@@ -8,27 +9,29 @@ public class PRVGameManager : MonoBehaviour
     public PRVAgent renardAgent;
     public PRVAgent vipereAgent;
 
-    [Header("=== Parametres de l'arene ===")]
-    [Tooltip("Demi-taille de la zone de jeu")]
+    [Header("=== Spawn Points ===")]
+    [Tooltip("Tous les spawn points de la map. Ceux hors de la zone active seront ignorés automatiquement.")]
+    public PRVSpawnPoint[] spawnPoints;
+
+    [Header("=== Paramètres par défaut (écrasés par le curriculum) ===")]
     public float areaSize = 10f;
-
-    [Tooltip("Duree max d'un episode en secondes")]
     public float maxEpisodeDuration = 30f;
-
-    [Header("=== Spawn ===")]
-    [Tooltip("Distance minimum entre les agents au spawn")]
-    public float minSpawnDistance = 4f;
 
     private float episodeTimer;
     private int pouleScore, renardScore, vipereScore;
+    private EnvironmentParameters envParams;
+
     private void Start()
     {
-        Debug.Assert(pouleAgent.agentRole == PRVAgent.Role.Poule, "L'agent Poule doit avoir le role Poule !");
-        Debug.Assert(renardAgent.agentRole == PRVAgent.Role.Renard, "L'agent Renard doit avoir le role Renard !");
-        Debug.Assert(vipereAgent.agentRole == PRVAgent.Role.Vipere, "L'agent Vipere doit avoir le role Vipere !");
+        envParams = Academy.Instance.EnvironmentParameters;
+
+        if (spawnPoints == null || spawnPoints.Length < 3)
+        {
+            Debug.LogError("[PRV] Il faut au minimum 3 Spawn Points !");
+            return;
+        }
 
         SetupAgentReferences();
-
         ResetAllAgents();
     }
 
@@ -56,7 +59,6 @@ public class PRVGameManager : MonoBehaviour
             pouleAgent.AddReward(-0.1f);
             renardAgent.AddReward(-0.1f);
             vipereAgent.AddReward(-0.1f);
-
             ResetAllAgents();
         }
     }
@@ -71,7 +73,7 @@ public class PRVGameManager : MonoBehaviour
         }
 
         Debug.Log($"[PRV] {hunter.agentRole} a mange {prey.agentRole} ! " +
-                  $"(Score: R={renardScore} P={pouleScore} V={vipereScore})");
+                  $"(R={renardScore} P={pouleScore} V={vipereScore})");
 
         ResetAllAgents();
     }
@@ -80,54 +82,74 @@ public class PRVGameManager : MonoBehaviour
     {
         episodeTimer = 0f;
 
-        Vector3[] spawnPositions = GenerateSpawnPositions(3);
+        areaSize = envParams.GetWithDefault("area_size", areaSize);
+        maxEpisodeDuration = envParams.GetWithDefault("episode_duration", maxEpisodeDuration);
 
-        ResetSingleAgent(renardAgent, spawnPositions[0]);
-        ResetSingleAgent(pouleAgent, spawnPositions[1]);
-        ResetSingleAgent(vipereAgent, spawnPositions[2]);
+        List<PRVSpawnPoint> validSpawns = GetValidSpawnPoints();
+
+        if (validSpawns.Count < 3)
+        {
+            Debug.LogWarning($"[PRV] Seulement {validSpawns.Count} spawn points dans la zone {areaSize}. " +
+                            "Ajoute des spawners plus proches du centre !");
+            validSpawns = new List<PRVSpawnPoint>(spawnPoints);
+        }
+
+        Vector3[] positions = PickSpawnPositions(validSpawns, 3);
+
+        SpawnAgent(renardAgent, positions[0]);
+        SpawnAgent(pouleAgent, positions[1]);
+        SpawnAgent(vipereAgent, positions[2]);
     }
 
-    private void ResetSingleAgent(PRVAgent agent, Vector3 position)
+    private List<PRVSpawnPoint> GetValidSpawnPoints()
     {
-        agent.transform.localPosition = position;
-        agent.transform.localRotation = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
-        agent.gameObject.SetActive(true);
-        agent.EndEpisode();
+        List<PRVSpawnPoint> valid = new List<PRVSpawnPoint>();
+        Vector3 center = transform.position;
+
+        foreach (PRVSpawnPoint sp in spawnPoints)
+        {
+            Vector3 relative = sp.transform.position - center;
+
+            if (Mathf.Abs(relative.x) <= areaSize && Mathf.Abs(relative.z) <= areaSize)
+            {
+                valid.Add(sp);
+            }
+        }
+
+        return valid;
     }
 
-    private Vector3[] GenerateSpawnPositions(int count)
+    private Vector3[] PickSpawnPositions(List<PRVSpawnPoint> validSpawns, int count)
     {
-        Vector3[] positions = new Vector3[count];
-        float margin = areaSize * 0.7f;
+        Vector3[] result = new Vector3[count];
+
+        for (int i = validSpawns.Count - 1; i > 0; i--)
+        {
+            int j = Random.Range(0, i + 1);
+            (validSpawns[i], validSpawns[j]) = (validSpawns[j], validSpawns[i]);
+        }
 
         for (int i = 0; i < count; i++)
         {
-            int attempts = 0;
-            bool valid;
-
-            do
+            if (i < validSpawns.Count)
             {
-                positions[i] = new Vector3(
-                    Random.Range(-margin, margin),
-                    0.5f,
-                    Random.Range(-margin, margin)
-                );
-
-                valid = true;
-                for (int j = 0; j < i; j++)
-                {
-                    if (Vector3.Distance(positions[i], positions[j]) < minSpawnDistance)
-                    {
-                        valid = false;
-                        break;
-                    }
-                }
-
-                attempts++;
-            } while (!valid && attempts < 50);
+                result[i] = validSpawns[i].GetRandomPosition();
+            }
+            else
+            {
+                result[i] = validSpawns[Random.Range(0, validSpawns.Count)].GetRandomPosition();
+            }
         }
 
-        return positions;
+        return result;
+    }
+
+    private void SpawnAgent(PRVAgent agent, Vector3 worldPosition)
+    {
+        agent.gameObject.SetActive(true);
+        Quaternion rot = Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+        agent.SetPendingSpawn(worldPosition, rot);
+        agent.EndEpisode();
     }
 
     private void OnDrawGizmos()
@@ -135,19 +157,4 @@ public class PRVGameManager : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(transform.position, new Vector3(areaSize * 2, 0.1f, areaSize * 2));
     }
-
-    /*private void OnGUI()
-    {
-        GUIStyle style = new GUIStyle(GUI.skin.label)
-        {
-            fontSize = 16,
-            fontStyle = FontStyle.Bold
-        };
-
-        float y = 10f;
-        GUI.Label(new Rect(10, y, 400, 25), $"Renard: {renardScore}", style); y += 25;
-        GUI.Label(new Rect(10, y, 400, 25), $"Poule: {pouleScore}", style); y += 25;
-        GUI.Label(new Rect(10, y, 400, 25), $"Vipere: {vipereScore}", style); y += 25;
-        GUI.Label(new Rect(10, y, 400, 25), $"Temps: {episodeTimer:F1}s / {maxEpisodeDuration}s", style);
-    }*/
 }

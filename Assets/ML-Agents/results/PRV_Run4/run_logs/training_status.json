@@ -1,0 +1,79 @@
+{
+    "area_size": {
+        "lesson_num": 0
+    },
+    "episode_duration": {
+        "lesson_num": 0
+    },
+    "PRV_Vipere": {
+        "checkpoints": [
+            {
+                "steps": 123491,
+                "file_path": "results\\PRV_Run4\\PRV_Vipere\\PRV_Vipere-123491.onnx",
+                "reward": -2.3757026195526123,
+                "creation_time": 1772026409.1353395,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run4\\PRV_Vipere\\PRV_Vipere-123491.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 123491,
+            "file_path": "results\\PRV_Run4\\PRV_Vipere.onnx",
+            "reward": -2.3757026195526123,
+            "creation_time": 1772026409.1353395,
+            "auxillary_file_paths": [
+                "results\\PRV_Run4\\PRV_Vipere\\PRV_Vipere-123491.pt"
+            ]
+        }
+    },
+    "PRV_Renard": {
+        "checkpoints": [
+            {
+                "steps": 123491,
+                "file_path": "results\\PRV_Run4\\PRV_Renard\\PRV_Renard-123491.onnx",
+                "reward": -1.2282828658819198,
+                "creation_time": 1772026409.3336086,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run4\\PRV_Renard\\PRV_Renard-123491.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 123491,
+            "file_path": "results\\PRV_Run4\\PRV_Renard.onnx",
+            "reward": -1.2282828658819198,
+            "creation_time": 1772026409.3336086,
+            "auxillary_file_paths": [
+                "results\\PRV_Run4\\PRV_Renard\\PRV_Renard-123491.pt"
+            ]
+        }
+    },
+    "PRV_Poule": {
+        "checkpoints": [
+            {
+                "steps": 123491,
+                "file_path": "results\\PRV_Run4\\PRV_Poule\\PRV_Poule-123491.onnx",
+                "reward": 0.48861717581748965,
+                "creation_time": 1772026409.48826,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run4\\PRV_Poule\\PRV_Poule-123491.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 123491,
+            "file_path": "results\\PRV_Run4\\PRV_Poule.onnx",
+            "reward": 0.48861717581748965,
+            "creation_time": 1772026409.48826,
+            "auxillary_file_paths": [
+                "results\\PRV_Run4\\PRV_Poule\\PRV_Poule-123491.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}

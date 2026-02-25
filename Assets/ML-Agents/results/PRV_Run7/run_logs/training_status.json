@@ -1,0 +1,134 @@
+{
+    "area_size": {
+        "lesson_num": 0
+    },
+    "episode_duration": {
+        "lesson_num": 0
+    },
+    "PRV_Renard": {
+        "checkpoints": [
+            {
+                "steps": 499927,
+                "file_path": "results\\PRV_Run7\\PRV_Renard\\PRV_Renard-499927.onnx",
+                "reward": -1.6912528675581728,
+                "creation_time": 1772041799.9881508,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run7\\PRV_Renard\\PRV_Renard-499927.pt"
+                ]
+            },
+            {
+                "steps": 999960,
+                "file_path": "results\\PRV_Run7\\PRV_Renard\\PRV_Renard-999960.onnx",
+                "reward": -0.38546718321740625,
+                "creation_time": 1772043174.1927807,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run7\\PRV_Renard\\PRV_Renard-999960.pt"
+                ]
+            },
+            {
+                "steps": 1080189,
+                "file_path": "results\\PRV_Run7\\PRV_Renard\\PRV_Renard-1080189.onnx",
+                "reward": null,
+                "creation_time": 1772043444.790477,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run7\\PRV_Renard\\PRV_Renard-1080189.pt"
+                ]
+            }
+        ],
+        "elo": -275.956251523733,
+        "final_checkpoint": {
+            "steps": 1080189,
+            "file_path": "results\\PRV_Run7\\PRV_Renard.onnx",
+            "reward": null,
+            "creation_time": 1772043444.790477,
+            "auxillary_file_paths": [
+                "results\\PRV_Run7\\PRV_Renard\\PRV_Renard-1080189.pt"
+            ]
+        }
+    },
+    "PRV_Vipere": {
+        "checkpoints": [
+            {
+                "steps": 499927,
+                "file_path": "results\\PRV_Run7\\PRV_Vipere\\PRV_Vipere-499927.onnx",
+                "reward": -0.7840642697576966,
+                "creation_time": 1772041799.9014113,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run7\\PRV_Vipere\\PRV_Vipere-499927.pt"
+                ]
+            },
+            {
+                "steps": 999960,
+                "file_path": "results\\PRV_Run7\\PRV_Vipere\\PRV_Vipere-999960.onnx",
+                "reward": -0.644043286703527,
+                "creation_time": 1772043174.0979507,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run7\\PRV_Vipere\\PRV_Vipere-999960.pt"
+                ]
+            },
+            {
+                "steps": 1080189,
+                "file_path": "results\\PRV_Run7\\PRV_Vipere\\PRV_Vipere-1080189.onnx",
+                "reward": null,
+                "creation_time": 1772043443.7808526,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run7\\PRV_Vipere\\PRV_Vipere-1080189.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1080189,
+            "file_path": "results\\PRV_Run7\\PRV_Vipere.onnx",
+            "reward": null,
+            "creation_time": 1772043443.7808526,
+            "auxillary_file_paths": [
+                "results\\PRV_Run7\\PRV_Vipere\\PRV_Vipere-1080189.pt"
+            ]
+        }
+    },
+    "PRV_Poule": {
+        "checkpoints": [
+            {
+                "steps": 499927,
+                "file_path": "results\\PRV_Run7\\PRV_Poule\\PRV_Poule-499927.onnx",
+                "reward": -1.1525250058621168,
+                "creation_time": 1772041800.0981472,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run7\\PRV_Poule\\PRV_Poule-499927.pt"
+                ]
+            },
+            {
+                "steps": 999960,
+                "file_path": "results\\PRV_Run7\\PRV_Poule\\PRV_Poule-999960.onnx",
+                "reward": -0.9927009161561727,
+                "creation_time": 1772043174.2823281,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run7\\PRV_Poule\\PRV_Poule-999960.pt"
+                ]
+            },
+            {
+                "steps": 1080189,
+                "file_path": "results\\PRV_Run7\\PRV_Poule\\PRV_Poule-1080189.onnx",
+                "reward": null,
+                "creation_time": 1772043445.2265284,
+                "auxillary_file_paths": [
+                    "results\\PRV_Run7\\PRV_Poule\\PRV_Poule-1080189.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1080189,
+            "file_path": "results\\PRV_Run7\\PRV_Poule.onnx",
+            "reward": null,
+            "creation_time": 1772043445.2265284,
+            "auxillary_file_paths": [
+                "results\\PRV_Run7\\PRV_Poule\\PRV_Poule-1080189.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}
