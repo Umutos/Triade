@@ -4368,6 +4368,14 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 435303546700667008, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 435303546700667008, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.75
+      objectReference: {fileID: 0}
     - target: {fileID: 546197024566771419, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: m_BehaviorName
       value: PRV_Agent
@@ -4375,6 +4383,14 @@ PrefabInstance:
     - target: {fileID: 546197024566771419, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176165959300594775, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176165959300594775, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 1809797616311375666, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4472,9 +4488,41 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2263262702997242555, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2263262702997242555, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2392647031345542376, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2392647031345542376, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037801240487483195, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037801240487483195, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.75
+      objectReference: {fileID: 0}
     - target: {fileID: 4063090902932301186, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: moveSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4326007149550797637, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4326007149550797637, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 4411173447617607537, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: moveSpeed
@@ -4500,9 +4548,41 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 6954934892974605545, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6954934892974605545, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158172018190911963, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158172018190911963, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.7500002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158172018190911963, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158172018190911963, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7296572195299611821, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: moveSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785474646481348139, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785474646481348139, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 522985401740284170, guid: 310b4a43c416d90498c8b65e2c21d780, type: 3}
       propertyPath: m_IsActive

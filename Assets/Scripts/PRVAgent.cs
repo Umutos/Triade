@@ -226,6 +226,16 @@ public class PRVAgent : Agent
         }
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (!isAlive) return;
+
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            AddReward(-0.01f);
+        }
+    }
+
     public bool IsPrey(Role otherRole)
     {
         return agentRole switch

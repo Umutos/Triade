@@ -66,11 +66,11 @@ engine_settings:
   no_graphics_monitor: false
 environment_parameters: null
 checkpoint_settings:
-  run_id: PRV_V2_Run11
+  run_id: PRV_V2_Run12
   initialize_from: PRV_V2_Run10
   load_model: false
   resume: false
-  force: true
+  force: false
   train_model: false
   inference: false
   results_dir: results
