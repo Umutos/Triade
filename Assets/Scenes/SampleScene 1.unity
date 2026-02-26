@@ -184,6 +184,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
       value: 7
       objectReference: {fileID: 0}
@@ -451,6 +455,10 @@ PrefabInstance:
     - target: {fileID: 1809797616311375666, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
@@ -870,6 +878,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
       value: 7
       objectReference: {fileID: 0}
@@ -1260,6 +1272,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
       value: 7
       objectReference: {fileID: 0}
@@ -1540,6 +1556,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
       value: 7
       objectReference: {fileID: 0}
@@ -1818,6 +1838,10 @@ PrefabInstance:
     - target: {fileID: 1809797616311375666, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
@@ -2143,6 +2167,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
       value: 7
       objectReference: {fileID: 0}
@@ -2410,6 +2438,10 @@ PrefabInstance:
     - target: {fileID: 1809797616311375666, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
@@ -2703,6 +2735,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
       value: 7
       objectReference: {fileID: 0}
@@ -2981,6 +3017,10 @@ PrefabInstance:
     - target: {fileID: 1809797616311375666, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
@@ -3263,6 +3303,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
       value: 7
       objectReference: {fileID: 0}
@@ -3530,6 +3574,10 @@ PrefabInstance:
     - target: {fileID: 1809797616311375666, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
@@ -3812,6 +3860,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
       value: 7
       objectReference: {fileID: 0}
@@ -4079,6 +4131,10 @@ PrefabInstance:
     - target: {fileID: 1809797616311375666, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance
@@ -4359,6 +4415,10 @@ PrefabInstance:
     - target: {fileID: 1809797616311375666, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
+      propertyPath: areaSize
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1872379614866558755, guid: 572ea7f0bdaa26c4385496ec5b716d39, type: 3}
       propertyPath: minSpawnDistance

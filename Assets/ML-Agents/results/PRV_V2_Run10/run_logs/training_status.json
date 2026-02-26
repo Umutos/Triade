@@ -1,0 +1,29 @@
+{
+    "PRV_Agent": {
+        "checkpoints": [
+            {
+                "steps": 290046,
+                "file_path": "results\\PRV_V2_Run10\\PRV_Agent\\PRV_Agent-290046.onnx",
+                "reward": -0.04091583590378009,
+                "creation_time": 1772090167.4978151,
+                "auxillary_file_paths": [
+                    "results\\PRV_V2_Run10\\PRV_Agent\\PRV_Agent-290046.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 290046,
+            "file_path": "results\\PRV_V2_Run10\\PRV_Agent.onnx",
+            "reward": -0.04091583590378009,
+            "creation_time": 1772090167.4978151,
+            "auxillary_file_paths": [
+                "results\\PRV_V2_Run10\\PRV_Agent\\PRV_Agent-290046.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}

@@ -7,14 +7,11 @@ public class PRVAgent : Agent
 {
     public enum Role { Poule, Renard, Vipere }
 
-    [Header("=== Configuration ===")]
     public Role agentRole;
 
-    [Header("=== Mouvement ===")]
     public float moveSpeed = 5f;
     public float rotationSpeed = 200f;
 
-    [Header("=== Références (assignées par le GameManager) ===")]
     [HideInInspector] public PRVGameManager gameManager;
     [HideInInspector] public Transform preyTransform;
     [HideInInspector] public Transform predatorTransform;
@@ -24,6 +21,8 @@ public class PRVAgent : Agent
     private Vector3 pendingSpawnPosition;
     private Quaternion pendingSpawnRotation;
     private bool hasPendingSpawn = false;
+
+    private float previousDistToPrey;
 
     private Vector3 RelativePosition(Vector3 worldPos)
     {
@@ -45,6 +44,11 @@ public class PRVAgent : Agent
 
     public override void OnEpisodeBegin()
     {
+        if (preyTransform != null)
+            previousDistToPrey = Vector3.Distance(transform.position, preyTransform.position);
+        else
+            previousDistToPrey = 0f;
+
         if (rb != null)
         {
             rb.linearVelocity = Vector3.zero;
@@ -126,17 +130,21 @@ public class PRVAgent : Agent
         if (preyTransform != null && preyTransform.gameObject.activeSelf)
         {
             float distToPrey = Vector3.Distance(transform.position, preyTransform.position);
-            AddReward((1f - distToPrey / areaSize) * 0.005f);
+
+            float delta = previousDistToPrey - distToPrey;
+            AddReward(delta * 0.01f);
+
+            previousDistToPrey = distToPrey;
         }
 
-        if (predatorTransform != null && predatorTransform.gameObject.activeSelf)
+        /*if (predatorTransform != null && predatorTransform.gameObject.activeSelf)
         {
             float distToPredator = Vector3.Distance(transform.position, predatorTransform.position);
             if (distToPredator < 3f)
             {
                 AddReward(-0.002f);
             }
-        }
+        }*/
 
         Vector3 relPos = RelativePosition(transform.position);
         if (Mathf.Abs(relPos.x) > areaSize || Mathf.Abs(relPos.z) > areaSize)

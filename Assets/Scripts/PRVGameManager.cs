@@ -9,11 +9,8 @@ public class PRVGameManager : MonoBehaviour
     public PRVAgent renardAgent;
     public PRVAgent vipereAgent;
 
-    [Header("=== Spawn Points ===")]
-    [Tooltip("Tous les spawn points de la map. Ceux hors de la zone active seront ignorés automatiquement.")]
     public PRVSpawnPoint[] spawnPoints;
 
-    [Header("=== Paramètres par défaut (écrasés par le curriculum) ===")]
     public float areaSize = 10f;
     public float maxEpisodeDuration = 30f;
 
@@ -72,9 +69,6 @@ public class PRVGameManager : MonoBehaviour
             case PRVAgent.Role.Vipere: vipereScore++; break;
         }
 
-        Debug.Log($"[PRV] {hunter.agentRole} a mange {prey.agentRole} ! " +
-                  $"(R={renardScore} P={pouleScore} V={vipereScore})");
-
         ResetAllAgents();
     }
 
@@ -89,8 +83,6 @@ public class PRVGameManager : MonoBehaviour
 
         if (validSpawns.Count < 3)
         {
-            Debug.LogWarning($"[PRV] Seulement {validSpawns.Count} spawn points dans la zone {areaSize}. " +
-                            "Ajoute des spawners plus proches du centre !");
             validSpawns = new List<PRVSpawnPoint>(spawnPoints);
         }
 
