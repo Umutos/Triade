@@ -13,21 +13,67 @@ public class PRVAgent : Agent
     public float rotationSpeed = 200f;
 
     [HideInInspector] public PRVGameManager gameManager;
-    [HideInInspector] public Transform preyTransform;
-    [HideInInspector] public Transform predatorTransform;
 
     private Rigidbody rb;
+    private float previousDistToPrey;
+    private bool isAlive = true;
+
+    public bool IsAlive => isAlive;
 
     private Vector3 pendingSpawnPosition;
     private Quaternion pendingSpawnRotation;
     private bool hasPendingSpawn = false;
 
-    private float previousDistToPrey;
-
     private Vector3 RelativePosition(Vector3 worldPos)
     {
         Vector3 arenaCenter = gameManager != null ? gameManager.transform.position : Vector3.zero;
         return worldPos - arenaCenter;
+    }
+
+    private PRVAgent FindClosest(Role targetRole)
+    {
+        if (gameManager == null) return null;
+
+        PRVAgent closest = null;
+        float closestDist = float.MaxValue;
+
+        foreach (PRVAgent agent in gameManager.allAgents)
+        {
+            if (agent == this) continue;
+            if (agent.agentRole != targetRole) continue;
+            if (!agent.isAlive) continue;
+
+            float dist = Vector3.Distance(transform.position, agent.transform.position);
+            if (dist < closestDist)
+            {
+                closestDist = dist;
+                closest = agent;
+            }
+        }
+
+        return closest;
+    }
+
+    private Role GetPreyRole()
+    {
+        return agentRole switch
+        {
+            Role.Renard => Role.Poule,
+            Role.Poule => Role.Vipere,
+            Role.Vipere => Role.Renard,
+            _ => Role.Poule
+        };
+    }
+
+    private Role GetPredatorRole()
+    {
+        return agentRole switch
+        {
+            Role.Poule => Role.Renard,
+            Role.Vipere => Role.Poule,
+            Role.Renard => Role.Vipere,
+            _ => Role.Renard
+        };
     }
 
     public override void Initialize()
@@ -44,11 +90,6 @@ public class PRVAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        if (preyTransform != null)
-            previousDistToPrey = Vector3.Distance(transform.position, preyTransform.position);
-        else
-            previousDistToPrey = 0f;
-
         if (rb != null)
         {
             rb.linearVelocity = Vector3.zero;
@@ -68,6 +109,14 @@ public class PRVAgent : Agent
 
             hasPendingSpawn = false;
         }
+
+        isAlive = true;
+
+        PRVAgent prey = FindClosest(GetPreyRole());
+        if (prey != null)
+            previousDistToPrey = Vector3.Distance(transform.position, prey.transform.position);
+        else
+            previousDistToPrey = 0f;
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -81,9 +130,10 @@ public class PRVAgent : Agent
         sensor.AddObservation(transform.forward.x);
         sensor.AddObservation(transform.forward.z);
 
-        if (preyTransform != null && preyTransform.gameObject.activeSelf)
+        PRVAgent closestPrey = FindClosest(GetPreyRole());
+        if (closestPrey != null)
         {
-            Vector3 toPrey = preyTransform.position - transform.position;
+            Vector3 toPrey = closestPrey.transform.position - transform.position;
             sensor.AddObservation(toPrey.x / areaSize);
             sensor.AddObservation(toPrey.z / areaSize);
             sensor.AddObservation(toPrey.magnitude / areaSize);
@@ -95,9 +145,10 @@ public class PRVAgent : Agent
             sensor.AddObservation(1f);
         }
 
-        if (predatorTransform != null && predatorTransform.gameObject.activeSelf)
+        PRVAgent closestPredator = FindClosest(GetPredatorRole());
+        if (closestPredator != null)
         {
-            Vector3 toPredator = predatorTransform.position - transform.position;
+            Vector3 toPredator = closestPredator.transform.position - transform.position;
             sensor.AddObservation(toPredator.x / areaSize);
             sensor.AddObservation(toPredator.z / areaSize);
             sensor.AddObservation(toPredator.magnitude / areaSize);
@@ -114,6 +165,8 @@ public class PRVAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
+        if (!isAlive) return;
+
         float moveInput = actions.ContinuousActions[0];
         float turnInput = actions.ContinuousActions[1];
 
@@ -127,24 +180,14 @@ public class PRVAgent : Agent
 
         float areaSize = gameManager != null ? gameManager.areaSize : 10f;
 
-        if (preyTransform != null && preyTransform.gameObject.activeSelf)
+        PRVAgent closestPrey = FindClosest(GetPreyRole());
+        if (closestPrey != null)
         {
-            float distToPrey = Vector3.Distance(transform.position, preyTransform.position);
-
+            float distToPrey = Vector3.Distance(transform.position, closestPrey.transform.position);
             float delta = previousDistToPrey - distToPrey;
             AddReward(delta * 0.01f);
-
             previousDistToPrey = distToPrey;
         }
-
-        /*if (predatorTransform != null && predatorTransform.gameObject.activeSelf)
-        {
-            float distToPredator = Vector3.Distance(transform.position, predatorTransform.position);
-            if (distToPredator < 3f)
-            {
-                AddReward(-0.002f);
-            }
-        }*/
 
         Vector3 relPos = RelativePosition(transform.position);
         if (Mathf.Abs(relPos.x) > areaSize || Mathf.Abs(relPos.z) > areaSize)
@@ -172,8 +215,10 @@ public class PRVAgent : Agent
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (!isAlive) return;
+
         PRVAgent other = collision.gameObject.GetComponent<PRVAgent>();
-        if (other == null) return;
+        if (other == null || !other.isAlive) return;
 
         if (IsPrey(other.agentRole))
         {
@@ -203,18 +248,17 @@ public class PRVAgent : Agent
         };
     }
 
-    private void OnCollisionStay(Collision collision)
+    public void Die()
     {
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            AddReward(-0.0005f);
-        }
+        isAlive = false;
+        AddReward(-1.0f);
+        gameObject.SetActive(false);
     }
 
     private void OnAteTarget(PRVAgent prey)
     {
         AddReward(1.0f);
-        prey.AddReward(-1.0f);
+        prey.Die();
 
         if (gameManager != null)
         {
