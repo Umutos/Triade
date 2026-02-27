@@ -1,0 +1,65 @@
+{
+    "PRV_Agent": {
+        "checkpoints": [
+            {
+                "steps": 3499870,
+                "file_path": "results\\PRV_V2_Run13\\PRV_Agent\\PRV_Agent-3499870.onnx",
+                "reward": -0.2103271519144376,
+                "creation_time": 1772160598.0503447,
+                "auxillary_file_paths": [
+                    "results\\PRV_V2_Run13\\PRV_Agent\\PRV_Agent-3499870.pt"
+                ]
+            },
+            {
+                "steps": 3999995,
+                "file_path": "results\\PRV_V2_Run13\\PRV_Agent\\PRV_Agent-3999995.onnx",
+                "reward": -0.16269763830033215,
+                "creation_time": 1772161028.4879174,
+                "auxillary_file_paths": [
+                    "results\\PRV_V2_Run13\\PRV_Agent\\PRV_Agent-3999995.pt"
+                ]
+            },
+            {
+                "steps": 4499958,
+                "file_path": "results\\PRV_V2_Run13\\PRV_Agent\\PRV_Agent-4499958.onnx",
+                "reward": -0.22823913651283342,
+                "creation_time": 1772161464.4551396,
+                "auxillary_file_paths": [
+                    "results\\PRV_V2_Run13\\PRV_Agent\\PRV_Agent-4499958.pt"
+                ]
+            },
+            {
+                "steps": 4999994,
+                "file_path": "results\\PRV_V2_Run13\\PRV_Agent\\PRV_Agent-4999994.onnx",
+                "reward": -0.3472256348017723,
+                "creation_time": 1772161896.7554939,
+                "auxillary_file_paths": [
+                    "results\\PRV_V2_Run13\\PRV_Agent\\PRV_Agent-4999994.pt"
+                ]
+            },
+            {
+                "steps": 5000228,
+                "file_path": "results\\PRV_V2_Run13\\PRV_Agent\\PRV_Agent-5000228.onnx",
+                "reward": -0.3063352267878751,
+                "creation_time": 1772161896.9486582,
+                "auxillary_file_paths": [
+                    "results\\PRV_V2_Run13\\PRV_Agent\\PRV_Agent-5000228.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 5000228,
+            "file_path": "results\\PRV_V2_Run13\\PRV_Agent.onnx",
+            "reward": -0.3063352267878751,
+            "creation_time": 1772161896.9486582,
+            "auxillary_file_paths": [
+                "results\\PRV_V2_Run13\\PRV_Agent\\PRV_Agent-5000228.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}

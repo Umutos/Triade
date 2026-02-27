@@ -35,7 +35,7 @@ behaviors:
           memory: null
           goal_conditioning_type: hyper
           deterministic: false
-    init_path: results\PRV_V2_Run10\PRV_Agent\checkpoint.pt
+    init_path: null
     keep_checkpoints: 5
     even_checkpoints: false
     max_steps: 5000000
@@ -67,9 +67,9 @@ engine_settings:
 environment_parameters: null
 checkpoint_settings:
   run_id: PRV_V2_Run12
-  initialize_from: PRV_V2_Run10
+  initialize_from: null
   load_model: false
-  resume: false
+  resume: true
   force: false
   train_model: false
   inference: false

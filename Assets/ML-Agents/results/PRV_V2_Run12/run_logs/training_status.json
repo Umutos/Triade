@@ -2,58 +2,58 @@
     "PRV_Agent": {
         "checkpoints": [
             {
-                "steps": 999952,
-                "file_path": "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-999952.onnx",
-                "reward": -1.1742088929662164,
-                "creation_time": 1772121381.8498049,
+                "steps": 3499919,
+                "file_path": "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-3499919.onnx",
+                "reward": -1.2053795754909515,
+                "creation_time": 1772156144.744878,
                 "auxillary_file_paths": [
-                    "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-999952.pt"
+                    "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-3499919.pt"
                 ]
             },
             {
-                "steps": 1499975,
-                "file_path": "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-1499975.onnx",
-                "reward": -0.8766637263553483,
-                "creation_time": 1772121750.4535668,
+                "steps": 3999747,
+                "file_path": "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-3999747.onnx",
+                "reward": -0.692408449746467,
+                "creation_time": 1772156552.356319,
                 "auxillary_file_paths": [
-                    "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-1499975.pt"
+                    "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-3999747.pt"
                 ]
             },
             {
-                "steps": 1999990,
-                "file_path": "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-1999990.onnx",
-                "reward": -0.6630859807226228,
-                "creation_time": 1772122122.2414382,
+                "steps": 4499958,
+                "file_path": "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-4499958.onnx",
+                "reward": -0.6956542455014728,
+                "creation_time": 1772157016.689718,
                 "auxillary_file_paths": [
-                    "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-1999990.pt"
+                    "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-4499958.pt"
                 ]
             },
             {
-                "steps": 2499913,
-                "file_path": "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-2499913.onnx",
-                "reward": -0.8361206265593258,
-                "creation_time": 1772122482.6674109,
+                "steps": 4999930,
+                "file_path": "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-4999930.onnx",
+                "reward": -0.9329987097400845,
+                "creation_time": 1772157503.1944013,
                 "auxillary_file_paths": [
-                    "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-2499913.pt"
+                    "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-4999930.pt"
                 ]
             },
             {
-                "steps": 2607755,
-                "file_path": "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-2607755.onnx",
-                "reward": -0.5230031649762686,
-                "creation_time": 1772122683.1709683,
+                "steps": 5000010,
+                "file_path": "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-5000010.onnx",
+                "reward": -0.9249834350593712,
+                "creation_time": 1772157503.2773092,
                 "auxillary_file_paths": [
-                    "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-2607755.pt"
+                    "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-5000010.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 2607755,
+            "steps": 5000010,
             "file_path": "results\\PRV_V2_Run12\\PRV_Agent.onnx",
-            "reward": -0.5230031649762686,
-            "creation_time": 1772122683.1709683,
+            "reward": -0.9249834350593712,
+            "creation_time": 1772157503.2773092,
             "auxillary_file_paths": [
-                "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-2607755.pt"
+                "results\\PRV_V2_Run12\\PRV_Agent\\PRV_Agent-5000010.pt"
             ]
         }
     },
